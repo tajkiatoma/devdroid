@@ -12,3 +12,5 @@
 * Check result with all possible information provided by stackexchange (https://api.stackexchange.com/docs/questions#order=desc&sort=creation&tagged=android&filter=default&site=stackoverflow&run=true)
 
 * calculate ago time in more realistic way
+* check for the trust issue in answer body
+* give the transition to question thread on title click
