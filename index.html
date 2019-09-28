@@ -11,9 +11,9 @@
 </head>
 
 <body ng-app="devdroid.stackoverflow">
-    <div ng-view></div>
     <main role="main"
           class="container-fluid">
+        <div ng-view></div>
         <div ng-controller="NewestPostController">
             <h5>{{title}}</h5>
             <div class="list-group">
@@ -42,7 +42,8 @@
         <div ng-controller="MostVotedPostController">
             <h5>{{title}}</h5>
             <div class="list-group">
-                <a href="#question/{{post.question_id}}" class="list-group-item list-group-item-action"
+                <a href="#question/{{post.question_id}}"
+                   class="list-group-item list-group-item-action"
                    ng-repeat="post in posts">
                     <div class="row">
                         <div class="col-md-1 text-center border-right">

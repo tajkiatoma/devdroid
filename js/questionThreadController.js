@@ -2,6 +2,6 @@ myApp.controller('QuestionThreadController', ['$scope', '$http', '$routeParams',
     $scope.questionId = $routeParams.questionId;
     var url = "https://api.stackexchange.com/2.2/questions/"+$routeParams.questionId+"/answers?site=stackoverflow&sort=votes&order=desc&filter=withbody";
         $http.get(url).then(function(response){
-            console.log(response.data.items);
+            $scope.answers = response.data.items;
         });
 }]);

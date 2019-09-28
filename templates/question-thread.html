@@ -1,1 +1,23 @@
-<div>hello world {{questionId}}</div>
+<div>question</div>
+<div class="card"
+     ng-repeat="answer in answers">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-1">
+                <img ng-src="{{answer.owner.profile_image}}"
+                     alt="Pro Pic"
+                     class="img-thumbnail"></div>
+            <div class="col-md-10">
+                <h6>{{answer.owner.display_name}} <span class="badge badge-success">{{answer.owner.reputation}}</span>
+                </h6>
+            </div>
+            <div class="col-md-1">
+                {{answer.creation_date}}</div>
+        </div>
+    </div>
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <div ng-bind-html="answer.body"></div>
+        </blockquote>
+    </div>
+</div>
