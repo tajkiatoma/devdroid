@@ -1,1 +1,1 @@
-var myApp = angular.module('devdroid.stackoverflow',[]);
+var myApp = angular.module('devdroid.stackoverflow',['ngRoute']);
