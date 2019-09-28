@@ -14,19 +14,38 @@
     <main role="main"
           class="container-fluid"
           ng-app="devdroid.stackoverflow">
-        <!-- <div ng-controller="NewestPostController">
+        <div ng-controller="NewestPostController">
             <h5>{{title}}</h5>
-            <ul ng-repeat="post in posts">
-                <li>{{post.title}}</li>
-            </ul>
+            <div class="list-group">
+                <a class="list-group-item list-group-item-action"
+                   ng-repeat="post in posts">
+                    <div class="row">
+                        <div class="col-md-1 text-center border-right">
+                            <div>Answers</div>
+                            <div>
+                                <h3 class="">{{post.answer_count}}</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-11">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">{{post.title}}</h5>
+                                <small>{{now-post.creation_date}} secs ago</small>
+                            </div>
+                            <p class="mb-1"><span ng-repeat="tag in post.tags"><span
+                                          class="badge badge-pill badge-info">{{tag}}</span>&nbsp;</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div ng-controller="MostVotedPostController">
+        <!-- <div ng-controller="MostVotedPostController">
             <h5>{{title}}</h5>
             <ul ng-repeat="post in posts">
                 <li>{{post.title}}</li>
             </ul>
         </div> -->
-        <div class="list-group">
+        <!-- <div class="list-group">
             <a class="list-group-item list-group-item-action">
                 <div class="row">
                     <div class="col-md-1 text-center border-right">
@@ -37,7 +56,8 @@
                     </div>
                     <div class="col-md-11">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+                            <h5 class="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.</h5>
                             <small>30 sec ago</small>
                         </div>
                         <p class="mb-1"><span class="badge badge-pill badge-info">Secondary</span>
@@ -75,7 +95,8 @@
                     </div>
                     <div class="col-md-11">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h5>
+                            <h5 class="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor</h5>
                             <small>2 min ago</small>
                         </div>
                         <p class="mb-1"><span class="badge badge-pill badge-info">Secondary</span>
@@ -84,7 +105,7 @@
                     </div>
                 </div>
             </a>
-        </div>
+        </div> -->
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="/js/app.js"></script>

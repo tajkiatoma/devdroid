@@ -8,3 +8,5 @@
 	-- https://api.stackexchange.com/2.2/questions?site=stackoverflow&tagged=android&sort=votes&fromdate=1569110400&todate=1569628800&order=desc
 	
 * Check result with all possible information provided by stackexchange (https://api.stackexchange.com/docs/questions#order=desc&sort=creation&tagged=android&filter=default&site=stackoverflow&run=true)
+
+* calculate ago time in more realistic way
