@@ -3,9 +3,9 @@
 
 * Study the stackexchange api document
  -- newest Android-related questions
-	-- https://api.stackexchange.com/questions?site=stackoverflow&tagged=android&sort=creation&order=desc
+	-- https://api.stackexchange.com/questions?site=stackoverflow&tagged=android&sort=creation&order=desc&page=1&pagesize=10
  -- most voted Android-related questions posted in the past week
-	-- https://api.stackexchange.com/2.2/questions?site=stackoverflow&tagged=android&sort=votes&fromdate=1569110400&todate=1569628800&order=desc
+	-- https://api.stackexchange.com/2.2/questions?site=stackoverflow&tagged=android&sort=votes&fromdate=1569110400&todate=1569628800&order=desc&page=1&pagesize=10
  -- get answers of a question
 	-- https://api.stackexchange.com/2.2/questions/{{question_ids}}/answers?site=stackoverflow&sort=votes&order=desc
 	
