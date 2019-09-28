@@ -9,4 +9,11 @@ myApp.controller('MostVotedPostController', ['$scope', '$http', function($scope,
     $http.get(url).then(function(response){
         $scope.posts = response.data.items.slice(0, 10);
     });
+
+    $scope.grabAnswers = function (questionId) {
+        url = "https://api.stackexchange.com/2.2/questions/"+questionId+"/answers?site=stackoverflow&sort=votes&order=desc";
+        $http.get(url).then(function(response){
+            console.log(response.data);
+        });
+    }
   }]);
