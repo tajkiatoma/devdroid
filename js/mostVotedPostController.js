@@ -1,5 +1,6 @@
 myApp.controller('MostVotedPostController', ['$scope', '$http', function($scope, $http) {
     $scope.title = 'Most Voted Posts in Past Week';
+    $scope.now = Math.trunc(Date.now()/1000);
     var daysToSubtract = 7;
     var toDate = Math.trunc(Date.now()/1000);
     var fromDate = toDate - (daysToSubtract * 24 * 60 * 60);
@@ -9,11 +10,4 @@ myApp.controller('MostVotedPostController', ['$scope', '$http', function($scope,
     $http.get(url).then(function(response){
         $scope.posts = response.data.items;
     });
-
-    $scope.grabAnswers = function (questionId) {
-        url = "https://api.stackexchange.com/2.2/questions/"+questionId+"/answers?site=stackoverflow&sort=votes&order=desc";
-        $http.get(url).then(function(response){
-            console.log(response.data);
-        });
-    }
   }]);
