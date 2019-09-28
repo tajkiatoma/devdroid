@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <script type="text/javascript">
+    function httpGet(theUrl) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+        xmlHttp.send( null );
+        return xmlHttp.responseText;
+    }
+    var newestPosts = JSON.parse(httpGet("https://api.stackexchange.com/2.2/questions?site=stackoverflow&tagged=android&sort=creation&order=desc"));
+    console.log(newestPosts);
+    </script>
+    <body>
+        
+    </body>
+</html>
