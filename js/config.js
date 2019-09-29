@@ -14,5 +14,7 @@ myApp.config(['$routeProvider', '$locationProvider', '$sceProvider', function($r
       }).when('/questions/bountied', {
         templateUrl: 'templates/bountied-questions.html',
         controller: 'BountiedQuestionController'
+      }).otherwise({
+          redirectTo: '/questions/newest'
       });
   }]);
