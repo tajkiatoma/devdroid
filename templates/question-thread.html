@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header d-flex justify-content-between align-items-center">
-        <h5 class="card-title">{{question.title}}</h5>
+        <h3 class="card-title">{{question.title}}</h3>
         <a class="btn btn-primary"
            ng-href="{{question.link}}"
            target="_blank">Answer the Question</a>
@@ -8,11 +8,21 @@
     <div class="card-body">
         <div class="row">
             <div class="col-md-1 border-right">
-                <div class="text-center">
+                <div class="text-center border-bottom">
                     <div>Votes</div>
                     <div>
                         <h3>{{question.score}}</h3>
                     </div>
+                </div>
+                <div class="text-center border-bottom mt-2">
+                    <div>Views</div>
+                    <div>
+                        <h3>{{question.view_count}}</h3>
+                    </div>
+                </div>
+                <div class="text-center mt-2">
+                    <span ng-repeat="tag in question.tags"><span
+                              class="badge badge-info font-weight-normal">{{tag}}</span>&nbsp;</span>
                 </div>
             </div>
             <div class="col-md-9">
@@ -27,8 +37,17 @@
                          class="img-thumbnail">
                     <div class="card-body">
                         <h5 class="card-title">{{question.owner.display_name}}</h5>
-                        <p class="card-text"><span class="badge badge-success">{{question.owner.reputation}}</span></p>
-                        <p class="card-text">{{question.fromNow}}</span></p>
+                        <p class="card-text">Reputation: <span
+                                  class="badge badge-success">{{question.owner.reputation}}</span></p>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <div class="text-center">
+                        <p>Asked {{question.askedFromNow}}<br>
+                            <span ng-if="question.creation_date != question.last_activity_date">Edited
+                                {{question.editedFromNow}}
+                            </span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -36,25 +55,48 @@
     </div>
 </div>
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center p-3 mb-3 border-bottom">
-    <h4 class="font-weight-normal">{{answers.length}} Answer{{answers.length > 1 ? s:''}}</h4>
+    <h4 class="font-weight-normal">{{question.answer_count}} Answer{{question.answer_count > 1 ? 's':''}}</h4>
 </div>
-<div class="card"
-     ng-repeat="answer in answers">
-    <div class="card-header">
-        <div class="row">
-            <div class="col-md-1">
-                <img ng-src="{{answer.owner.profile_image}}"
-                     alt="Pro Pic"
-                     class="img-thumbnail"></div>
-            <div class="col-md-10">
-                <h6>{{answer.owner.display_name}} <span class="badge badge-success">{{answer.owner.reputation}}</span>
-                </h6>
+<div class="card">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"
+            ng-repeat="answer in answers">
+            <div class="row">
+                <div class="col-md-1 border-right align-items-center">
+                    <div class="text-center">
+                        <div>Votes</div>
+                        <div>
+                            <h3>{{answer.score}}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <p class="card-text"
+                    ng-bind-html="answer.body"></p>
+                    </h6>
+                </div>
+                <div class="col-md-2 border-left">
+                    <div class="card">
+                        <img ng-src="{{answer.owner.profile_image}}"
+                             alt="Pro Pic"
+                             class="img-thumbnail">
+                        <div class="card-body">
+                            <h5 class="card-title">{{answer.owner.display_name}}</h5>
+                            <p class="card-text">Reputation: <span
+                                      class="badge badge-success">{{answer.owner.reputation}}</span></p>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <div class="text-center">
+                            <p>Answered {{answer.askedFromNow}}<br>
+                                <span ng-if="answer.creation_date != answer.last_activity_date">Edited
+                                    {{answer.editedFromNow}}
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-1">
-                {{answer.creation_date}}</div>
-        </div>
-    </div>
-    <div class="card-body">
-        <div ng-bind-html="answer.body"></div>
-    </div>
+        </li>
+    </ul>
 </div>
