@@ -5,6 +5,6 @@ myApp.controller('NewestPostController', ['$scope', '$http', function($scope, $h
         _(response.data.items).forEach(function (item) {
             item.fromNow = moment(item.creation_date*1000).fromNow();
         });
-        $scope.posts = response.data.items;
-    });
+        $scope.questions = response.data.items;
+    //});
 }]);
