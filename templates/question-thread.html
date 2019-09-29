@@ -20,11 +20,11 @@
                         <h3>{{question.view_count}}</h3>
                     </div>
                 </div>
-                <div class="text-center mt-2" ng-class="question.bounty_amount? border-bottom: ''">
+                <div class="text-center mt-2" ng-class="question.bounty_amount? 'border-bottom': ''">
                     <span ng-repeat="tag in question.tags"><span
                               class="badge badge-info font-weight-normal">{{tag}}</span>&nbsp;</span>
                 </div>
-                <div class="text-center mt-2" ng-show="question.bounty_amount != null">
+                <div class="text-center mt-2" ng-if="question.bounty_amount != null">
                     <span class="badge badge-primary font-weight-normal">+{{question.bounty_amount}}</span>
                 </div>
             </div>
