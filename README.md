@@ -24,5 +24,5 @@ The live version of the app is hosted at https://tajkiatoma.github.io/devdroid/.
 Note that, unanswered questions are those for which there are no upvoted answers (according to Stack Overflow).
 
 ## API Limitations
-Stack Overflow API has been used to fethc data. The unregistered usage of the API allows 300 requests per day per client (tracked by IP).
+Stack Overflow API has been used to fetch data. The unregistered usage of the API allows 300 requests per day per client (tracked by IP).
 
