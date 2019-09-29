@@ -24,18 +24,24 @@
                 <a href="#questions/most-voted"
                    class="btn btn-secondary"
                    role="button">Most Voted Questions</a>
-                </div>
+                <a href="#questions/bountied"
+                   class="btn btn-secondary"
+                   role="button">Bountied Questions</a>
+            </div>
         </div>
-        
+
         <div ng-view></div>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+    
     <script src="js/app.js"></script>
     <script src="js/config.js"></script>
     <script src="js/newestPostController.js"></script>
     <script src="js/mostVotedPostController.js"></script>
     <script src="js/questionThreadController.js"></script>
+    <script src="js/bountiedQuestionsController.js"></script>
 </body>
 
 </html>

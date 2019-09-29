@@ -11,5 +11,8 @@ myApp.config(['$routeProvider', '$locationProvider', '$sceProvider', function($r
       }).when('/questions/most-voted', {
         templateUrl: 'templates/most-voted-questions.html',
         controller: 'MostVotedPostController'
+      }).when('/questions/bountied', {
+        templateUrl: 'templates/bountied-questions.html',
+        controller: 'BountiedQuestionController'
       });
   }]);
