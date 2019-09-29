@@ -14,3 +14,5 @@
 * calculate ago time in more realistic way
 * check for the trust issue in answer body
 * give the transition to question thread on title click
+* display No answer text when there is no answer of a question
+* add a button to give answer. redirect to the original page
