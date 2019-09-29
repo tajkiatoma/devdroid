@@ -13,19 +13,22 @@
 <body ng-app="devdroid.stackoverflow">
     <main role="main"
           class="container-fluid">
-        <div
+        <div ng-controller="NavController"
              class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
             <h3 class="my-0 mr-md-auto font-weight-normal">Stackoverflow for Android developers</h3>
             <div class="btn-group mt-2"
                  role="group">
                 <a href="#questions/newest"
-                   class="btn btn-secondary"
+                   class="btn btn-outline-secondary"
+                   ng-class="{active: currentUrl === '/questions/newest'}"
                    role="button">Newest Questions</a>
                 <a href="#questions/most-voted"
-                   class="btn btn-secondary"
+                   class="btn btn-outline-secondary"
+                   ng-class="{active: currentUrl === '/questions/most-voted'}"
                    role="button">Most Voted Questions</a>
                 <a href="#questions/bountied"
-                   class="btn btn-secondary"
+                   class="btn btn-outline-secondary"
+                   ng-class="{active: currentUrl === '/questions/bountied'}"
                    role="button">Bountied Questions</a>
             </div>
         </div>
@@ -42,6 +45,7 @@
     <script src="js/mostVotedPostController.js"></script>
     <script src="js/questionThreadController.js"></script>
     <script src="js/bountiedQuestionsController.js"></script>
+    <script src="js/navController.js"></script>
 </body>
 
 </html>
