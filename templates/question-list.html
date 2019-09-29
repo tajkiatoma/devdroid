@@ -28,7 +28,7 @@
             </div>
             <div class="col-md-10">
                 <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">{{question.title}}</h5>
+                    <h5 class="mb-1" ng-bind-html="question.title"></h5>
                     <small>{{question.fromNow}}</small>
                 </div>
                 <p class="mb-1"><span ng-repeat="tag in question.tags"><span
