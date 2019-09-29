@@ -1,4 +1,6 @@
-<h5>{{title}}</h5>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center  p-3 mb-3 border-bottom">
+    <h4 class="font-weight-normal">{{title}}</h4>
+</div>
 <div class="list-group">
     <a href="#question/{{post.question_id}}"
        class="list-group-item list-group-item-action"
@@ -16,7 +18,7 @@
                     <small>{{now-post.creation_date}} secs ago</small>
                 </div>
                 <p class="mb-1"><span ng-repeat="tag in post.tags"><span
-                              class="badge badge-pill badge-info">{{tag}}</span>&nbsp;</span>
+                              class="badge badge-pill badge-info font-weight-normal">{{tag}}</span>&nbsp;</span>
                 </p>
             </div>
         </div>
