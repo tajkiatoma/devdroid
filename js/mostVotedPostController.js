@@ -9,5 +9,5 @@ myApp.controller('MostVotedPostController', ['$scope', '$http', function($scope,
             item.fromNow = moment(item.creation_date*1000).fromNow();
         });
         $scope.questions = response.data.items;
-    //});
+    });
   }]);
