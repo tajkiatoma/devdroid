@@ -15,13 +15,13 @@ In the next 48 hours, can you implement the following:
 ## How to Run
 The live version of the app is hosted at https://tajkiatoma.github.io/devdroid/.
 
-**Running Locally**: Everything required for the app is included in the repository. CDN urls are used for external libraries. To run the website in local machine, clone the repository and put all the contents in a web server. During development I have used `Live Server` extension of VS code as web server. 
+**Running Locally**: Everything required for the app is included in the repository. CDN URLs are used for external libraries. To run the website in local machine, clone the repository and put all the contents in a web server. During development, I have used `Live Server` extension of VS code as web server. 
 
 ## Features
-- List views of the 10 newest Android-related questions and the 10 most voted Android-related questions are available in one page with tabbed view for imporved user experience. Each item of the list shows question title, question badges, date of the question being asked, vote and answer count. Clicking on the question will send the user to the question thread.
-- The question thread includes the question and its answers. Along with the post body, each of the post includes it's vote and view count, tags, bounty, the author's avatar, name and reputation, post time and edit time.
-- Attractive questions - Bountied and unanswered questions are displayed in attractive question page. The bountied questions are sorted by highest bounty and then by lowest number of answers. 10 newest unanswered questions are then displayed in ascending order of answer count. If a question is both bountied and unanswered, it is shown only with the bountied questions.  
-Note that, unanswered questions are those for which there is no upvoted answers (according to stackoverflow).
+- List views of the 10 newest Android-related questions and the 10 most voted Android-related questions are available in one page with a tabbed view for improved user experience. Each item of the list shows question title, question badges, date of the question being asked, vote and answer count. Clicking on the question will send the user to the question thread.
+- The question thread includes the question and its answers. Along with the post body, each of the posts includes its vote and view count, tags, bounty, the author's avatar, name and reputation, post time and edit time.
+- Attractive questions - Bountied and unanswered questions are displayed in the attractive question page. The bountied questions are sorted by highest bounty and then by lowest number of answers. 10 newest unanswered questions are then displayed in ascending order of answer count. If a question is both bountied and unanswered, it is shown only with the bountied questions.  
+Note that, unanswered questions are those for which there are no upvoted answers (according to Stack Overflow).
 
 ## API Limitations
 Stack Overflow API has been used to fethc data. The unregistered usage of the API allows 300 requests per day per client (tracked by IP).
