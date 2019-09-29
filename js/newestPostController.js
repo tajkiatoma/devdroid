@@ -1,5 +1,5 @@
 myApp.controller('NewestPostController', ['$scope', 'httpService', function($scope, httpService) {
-    $scope.title = 'Newest Questions';
+    $scope.title = '10 Newest Questions';
     httpService.getNewestQuestions().then(function(response){
         _(response.data.items).forEach(function (item) {
             item.fromNow = moment(item.creation_date*1000).fromNow();

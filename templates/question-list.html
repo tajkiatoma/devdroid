@@ -14,11 +14,15 @@
                 </div>
             </div>
             <div class="col-md-1 text-center border-right"
-                 ng-if="showBounty">
+                 ng-if="showBounty && question.bounty_amount">
                 <div>Bounty</div>
                 <div>
                     <h4 class="">{{question.bounty_amount}}</h4>
                 </div>
+            </div>
+            <div class="col-md-1 text-center border-right"
+                 ng-if="showBounty && !question.bounty_amount">
+                <p>No Bounty</p>
             </div>
             <div class="col-md-1 text-center border-right">
                 <div>Answers</div>
