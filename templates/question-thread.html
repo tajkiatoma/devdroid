@@ -1,31 +1,42 @@
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center p-3 mb-3 border-bottom">
-    <h4 class="font-weight-normal">Question</h4>
-    <a class="btn btn-primary" ng-href="{{question.link}}" target="_blank">Answer the Question</a>
-</div>
 <div class="card">
-    <div class="card-header">
-        <div class="row">
-            <div class="col-md-1">
-                <img ng-src="{{question.owner.profile_image}}"
-                     alt="Pro Pic"
-                     class="img-thumbnail"></div>
-            <div class="col-md-10">
-                <h6>{{question.owner.display_name}} <span
-                          class="badge badge-success">{{question.owner.reputation}}</span>
-                </h6>
-            </div>
-            <div class="col-md-1">
-                {{question.creation_date}}</div>
-        </div>
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="card-title">{{question.title}}</h5>
+        <a class="btn btn-primary"
+           ng-href="{{question.link}}"
+           target="_blank">Answer the Question</a>
     </div>
     <div class="card-body">
-        <h5 class="card-title">{{question.title}}</h5>
-        <p class="card-text"
-           ng-bind-html="question.body"></p>
+        <div class="row">
+            <div class="col-md-1 border-right">
+                <div class="text-center">
+                    <div>Votes</div>
+                    <div>
+                        <h3>{{question.score}}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <p class="card-text"
+                   ng-bind-html="question.body"></p>
+                </h6>
+            </div>
+            <div class="col-md-2 border-left">
+                <div class="card">
+                    <img ng-src="{{question.owner.profile_image}}"
+                         alt="Pro Pic"
+                         class="img-thumbnail">
+                    <div class="card-body">
+                        <h5 class="card-title">{{question.owner.display_name}}</h5>
+                        <p class="card-text"><span class="badge badge-success">{{question.owner.reputation}}</span></p>
+                        <p class="card-text">{{question.fromNow}}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center p-3 mb-3 border-bottom">
-    <h4 class="font-weight-normal">Answers</h4>
+    <h4 class="font-weight-normal">{{answers.length}} Answer{{answers.length > 1 ? s:''}}</h4>
 </div>
 <div class="card"
      ng-repeat="answer in answers">
