@@ -8,6 +8,6 @@ myApp.controller('MostVotedPostController', ['$scope', '$http', function($scope,
         _(response.data.items).forEach(function (item) {
             item.fromNow = moment(item.creation_date*1000).fromNow();
         });
-        $scope.posts = response.data.items;
-    });
+        $scope.questions = response.data.items;
+    //});
   }]);
