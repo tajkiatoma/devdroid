@@ -1,5 +1,5 @@
 myApp.controller('BountiedQuestionController', ['$scope', '$http', function($scope, $http) {
-    $scope.title = 'Bountied Unanswered Questions';
+    $scope.title = 'Bountied Questions';
     var daysToSubtract = 7;
     var toDate = Math.trunc(Date.now()/1000);
     var fromDate = toDate - (daysToSubtract * 24 * 60 * 60);
@@ -8,6 +8,6 @@ myApp.controller('BountiedQuestionController', ['$scope', '$http', function($sco
         _(response.data.items).forEach(function (item) {
             item.fromNow = moment(item.creation_date*1000).fromNow();
         });
-        $scope.posts = _.orderBy(response.data.items, ['bounty_amount', 'answer_count'], ['desc', 'asc']);
+        $scope.questions = _.orderBy(response.data.items, ['bounty_amount', 'answer_count'], ['desc', 'asc']);
     });
 }]);

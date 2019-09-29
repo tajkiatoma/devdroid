@@ -6,11 +6,17 @@
        class="list-group-item list-group-item-action"
        ng-repeat="question in questions">
         <div class="row">
-            <div class="col-md-1 text-center border-right">
+            <div class="col-md-1 text-center border-right" ng-if="showVotes">
                 <div>Votes</div>
                 <div>
                     <h3 class="">{{question.score}}</h3>
                 </div>
+            </div>
+            <div class="col-md-1 text-center border-right" ng-if="showBounty">
+                    <div>Bounty</div>
+                    <div>
+                        <h3 class="">{{question.bounty_amount}}</h3>
+                    </div>
             </div>
             <div class="col-md-1 text-center border-right">
                 <div>Answers</div>

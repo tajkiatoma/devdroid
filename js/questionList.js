@@ -3,7 +3,9 @@ myApp.directive("questionList", [
     return {
       scope: {
         pageTitle: "=",
-        questions: "="
+        questions: "=",
+        showVotes: "=",
+        showBounty: "="
       },
       templateUrl: "templates/question-list.html",
       controller: [
